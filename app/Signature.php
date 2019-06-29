@@ -21,7 +21,7 @@ class Signature extends Model
     */
     public function scopeIgnoreFlagged($query)
     {
-        return $query->where('flagged*at', null);
+        return $query->where('flagged_at', null);
     }
 
     /**
@@ -31,7 +31,7 @@ class Signature extends Model
     */
     public function flag()
     {
-        return $this->update(['flagged*at' => \Carbon\Carbon::now()]);
+        return $this->update(['flagged_at' => \Carbon\Carbon::now()]);
     }
 
     /**
