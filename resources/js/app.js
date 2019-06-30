@@ -1,12 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-undef */
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
 window.Vue = require('vue');
+window.axios = require('axios');
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,6 +31,7 @@ Vue.component('paginate', require('vuejs-paginate'));
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// eslint-disable-next-line no-unused-vars
 const app = new Vue({
   el: '#app',
 });
