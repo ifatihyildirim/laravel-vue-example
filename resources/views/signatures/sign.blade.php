@@ -1,11 +1,7 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <signature-form></signature-form>
-            </div>
-        </div>
+    <div class="container  max-w-3xl mx-auto">
+        <signature-form></signature-form>
     </div>
 @endsection

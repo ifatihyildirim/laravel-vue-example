@@ -1761,6 +1761,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2412,186 +2426,32 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.saved
-      ? _c("div", { staticClass: "alert alert-success" }, [
-          _c("strong", [_vm._v("Success!")]),
-          _vm._v(" Your signature has been saved successfully.\n  ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "well well-sm", attrs: { id: "signature-form" } },
-      [
-        _c(
-          "form",
+      ? _c(
+          "div",
           {
-            staticClass: "form-horizontal",
-            attrs: { method: "post" },
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-                return _vm.onSubmit($event)
-              }
-            }
+            staticClass:
+              "bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md rounded mb-4",
+            attrs: { role: "alert" }
           },
           [
-            _c("fieldset", [
-              _c("legend", { staticClass: "text-center" }, [
-                _vm._v("Sign the GuestBook")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "flex" }, [
+              _c("div", { staticClass: "py-1" }, [
                 _c(
-                  "label",
+                  "svg",
                   {
-                    staticClass: "col-md-3 control-label",
-                    attrs: { for: "name" }
-                  },
-                  [_vm._v("Name")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-md-9",
-                    class: { "has-error": _vm.errors.name }
+                    staticClass: "fill-current h-6 w-6 text-teal-500 mr-4",
+                    attrs: {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      viewBox: "0 0 20 20"
+                    }
                   },
                   [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.signature.name,
-                          expression: "signature.name"
-                        }
-                      ],
-                      staticClass: "form-control",
+                    _c("path", {
                       attrs: {
-                        id: "name",
-                        type: "text",
-                        placeholder: "Your name"
-                      },
-                      domProps: { value: _vm.signature.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.signature, "name", $event.target.value)
-                        }
+                        d:
+                          "M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
                       }
-                    }),
-                    _vm._v(" "),
-                    _vm.errors.name
-                      ? _c("span", { staticClass: "help-block text-danger" }, [
-                          _vm._v(_vm._s(_vm.errors.name[0]))
-                        ])
-                      : _vm._e()
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "label",
-                  {
-                    staticClass: "col-md-3 control-label",
-                    attrs: { for: "email" }
-                  },
-                  [_vm._v("Your E-mail")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-md-9",
-                    class: { "has-error": _vm.errors.email }
-                  },
-                  [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.signature.email,
-                          expression: "signature.email"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        id: "email",
-                        type: "text",
-                        placeholder: "Your email"
-                      },
-                      domProps: { value: _vm.signature.email },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.signature, "email", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _vm.errors.email
-                      ? _c("span", { staticClass: "help-block text-danger" }, [
-                          _vm._v(_vm._s(_vm.errors.email[0]))
-                        ])
-                      : _vm._e()
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-group" }, [
-                _c(
-                  "label",
-                  {
-                    staticClass: "col-md-3 control-label",
-                    attrs: { for: "body" }
-                  },
-                  [_vm._v("Your message")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "col-md-9",
-                    class: { "has-error": _vm.errors.body }
-                  },
-                  [
-                    _c("textarea", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.signature.body,
-                          expression: "signature.body"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: {
-                        id: "body",
-                        placeholder: "Please enter your message here...",
-                        rows: "5"
-                      },
-                      domProps: { value: _vm.signature.body },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.signature, "body", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _vm.errors.body
-                      ? _c("span", { staticClass: "help-block text-danger" }, [
-                          _vm._v(_vm._s(_vm.errors.body[0]))
-                        ])
-                      : _vm._e()
+                    })
                   ]
                 )
               ]),
@@ -2600,8 +2460,153 @@ var render = function() {
             ])
           ]
         )
-      ]
-    )
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "w-full", attrs: { id: "signature-form" } }, [
+      _c(
+        "form",
+        {
+          staticClass: "bg-white shadow rounded px-8 pt-6 pb-8 mb-4",
+          attrs: { method: "post" },
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.onSubmit($event)
+            }
+          }
+        },
+        [
+          _c("div", { staticClass: "mb-4" }, [
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-700 text-sm font-bold mb-2",
+                attrs: { for: "name" }
+              },
+              [_vm._v("Name")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.signature.name,
+                  expression: "signature.name"
+                }
+              ],
+              staticClass:
+                "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+              class: { "border-red-500": _vm.errors.name },
+              attrs: { id: "name", type: "text", placeholder: "Your name" },
+              domProps: { value: _vm.signature.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.signature, "name", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.name
+              ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                  _vm._v(_vm._s(_vm.errors.name[0]))
+                ])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-4" }, [
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-700 text-sm font-bold mb-2",
+                attrs: { for: "email" }
+              },
+              [_vm._v("Your E-mail")]
+            ),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.signature.email,
+                  expression: "signature.email"
+                }
+              ],
+              staticClass:
+                "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+              class: { "border-red-500": _vm.errors.email },
+              attrs: { id: "email", type: "email", placeholder: "Your email" },
+              domProps: { value: _vm.signature.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.signature, "email", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.email
+              ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                  _vm._v(_vm._s(_vm.errors.email[0]))
+                ])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mb-6" }, [
+            _c(
+              "label",
+              {
+                staticClass: "block text-gray-700 text-sm font-bold mb-2",
+                attrs: { for: "body" }
+              },
+              [_vm._v("Your message")]
+            ),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.signature.body,
+                  expression: "signature.body"
+                }
+              ],
+              staticClass:
+                "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+              class: { "border-red-500": _vm.errors.body },
+              attrs: {
+                id: "body",
+                placeholder: "Please enter your message here...",
+                rows: "5"
+              },
+              domProps: { value: _vm.signature.body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.signature, "body", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.errors.body
+              ? _c("p", { staticClass: "text-red-500 text-xs italic" }, [
+                  _vm._v(_vm._s(_vm.errors.body[0]))
+                ])
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _vm._m(1)
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -2609,14 +2614,28 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "col-md-12 text-right" }, [
-        _c(
-          "button",
-          { staticClass: "btn btn-primary btn-lg", attrs: { type: "submit" } },
-          [_vm._v("Submit")]
-        )
+    return _c("div", [
+      _c("p", { staticClass: "font-bold" }, [_vm._v("Success!")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text-sm" }, [
+        _vm._v("Your signature has been saved successfully.")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex items-center justify-end" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("Submit")]
+      )
     ])
   }
 ]
