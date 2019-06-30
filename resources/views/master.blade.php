@@ -15,7 +15,7 @@
     <body>
         <div id="app">
             <nav
-                class="flex sticky top-0 bg-white mb-4 items-center justify-between text-teal-500 border-b shadow flex-wrap p-1" >
+                class="flex sticky top-0 bg-white mb-4 px-8 items-center justify-between text-teal-500 border-b shadow flex-wrap p-1" >
                 <div>
                     <a class="text-teal-500 text-2xl" href="{{ route('home') }}">GuestBook</a>
                 </div>

@@ -38,7 +38,7 @@
       :click-handler="fetch"
       :prev-text="'Prev'"
       :next-text="'Next'"
-      :container-class="'flex flex-row'"
+      :container-class="'flex justify-center flex-row mb-8'"
       :active-class="'text-teal-500'"
       :page-class="'mr-3'"
       :prev-class="'mr-3'"
